@@ -1,14 +1,15 @@
 import styles from './header.module.css'
 import Link from 'next/link'
+import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
 export default function Header() {
   return (
     <header className={ 'fixed top-0 w-3/12 py-32 ' + styles.header}>
       <Link href={`/`}>
-        <a className={styles.wrapper}><div className={styles.logo}></div></a>
+        <a className={styles.wrapper}><div className={styles.logo  + " mx-auto mb-8"}></div></a>
       </Link>
       <nav>
-        <ul className={styles.container__list}>
+        <ul className={styles.container__list + " text-center"}>
           <li>
             Gallery
             <ul>
@@ -31,6 +32,10 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      <div className="flex social w-full justify-center py-8">
+        <AiFillFacebook />
+        <AiFillInstagram />
+      </div>
     </header>
   )
 }
