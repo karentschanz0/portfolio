@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className={ 'fixed top-0 ' + styles.header}>
-      <Link href={`/gallery/sketch`}>
-        <a><img src="/vercel.svg" alt="logo"/></a>
+    <header className={ 'fixed top-0 w-3/12 py-32 ' + styles.header}>
+      <Link href={`/`}>
+        <a className={styles.wrapper}><div className={styles.logo}></div></a>
       </Link>
       <nav>
         <ul className={styles.container__list}>
@@ -23,7 +23,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href={`/gallery/digital`}>
+                <Link href={`/gallery/digital/all`}>
                   <a>digital</a>
                 </Link>
               </li>

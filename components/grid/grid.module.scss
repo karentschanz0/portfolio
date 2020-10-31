@@ -1,8 +1,8 @@
 .masonry {
-  columns: 4;
+  columns: 3;
   column-gap: 16px;
   @media (max-width: 1200px) {
-    columns: 4;
+    columns: 3;
   }
   @media (max-width: 992px) {
     columns: 2;
@@ -13,21 +13,15 @@
     margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    &:before {
-      content:'';
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0;
-      background-color:rgba(0,0,0,.2);
-    }
+    align-self: start;
+
     &:hover img{
-      transform: scale(1.1);
+      opacity: 0.5;
     }
     img {
       width: 100%;
-      transition: all 4s ease-in-out;
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
     &__title {
       font-size: 28px;

@@ -1,11 +1,11 @@
 import Layout from '../../../components/layout/layout'
 import Head from 'next/head'
 import Grid from '../../../components/grid/grid'
-import { getSortedPostsData } from '../../../lib/posts-watercolor'
+import { getSortedPostsData } from '../../../lib/posts-digital'
 import styles from '../../../components/grid/grid.module.scss'
 import Link from 'next/link'
 
-export const siteTitle = 'Gallery Watercolor'
+export const siteTitle = 'Gallery Digital'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -16,7 +16,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Watercolor({allPostsData}) {
+export default function Digital({allPostsData}) {
   return (
     <>
       <Layout>
@@ -25,7 +25,7 @@ export default function Watercolor({allPostsData}) {
       </Head>
       <div className={styles.masonry}>
        {allPostsData.map(({ id, title, image }) => (
-         <Link href={`/gallery/watercolor/${id}`}>
+         <Link href={`/gallery/digital/${id}`}>
            <a>
             <Grid galleryImage={image} galleryTitle={title}/>
             </a>

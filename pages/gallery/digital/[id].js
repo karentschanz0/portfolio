@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../../../components/layout/layout'
 import Date from '../../../components/date/date'
 import utilStyles from '../../../styles/utils.module.css'
-import { getAllPostIds, getPostData } from '../../../lib/posts-watercolor'
+import { getAllPostIds, getPostData } from '../../../lib/posts-digital'
 
 export default function Post({ postData }) {
   return (

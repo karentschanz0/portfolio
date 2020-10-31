@@ -1,6 +1,6 @@
 import styles from './grid.module.scss'
 
-export default function GridWatercolor(props) {
+export default function Grid(props) {
   return (
           <div className={styles.grid}>
             <img src={props.galleryImage} />
