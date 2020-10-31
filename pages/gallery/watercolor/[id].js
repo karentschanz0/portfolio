@@ -10,7 +10,6 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-
       <article>
         <div>
           <img className="img-gallery" src={postData.imageFull} />
@@ -18,7 +17,6 @@ export default function Post({ postData }) {
 
         {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
       </article>
-
     </Layout>
   )
 }

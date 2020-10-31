@@ -28,7 +28,6 @@ export default function Layout({ children, home }) {
       <div className="flex">
       <Header/>
       <div className="content">
-      <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
@@ -36,6 +35,8 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <main>{children}</main>
+
     </div>
     </div> </div>
   )
